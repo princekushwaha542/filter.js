@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.container {
+  width: 350px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.money.plus {
+  color: green;
+}
+
+.money.minus {
+  color: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: #eee;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
