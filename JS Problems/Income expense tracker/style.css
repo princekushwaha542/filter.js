@@ -1,45 +1,142 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-}
-
-.container {
-  width: 350px;
-  background: #fff;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.summary {
-  display: flex;
-  justify-content: space-between;
-}
-
-.money.plus {
-  color: green;
-}
-
-.money.minus {
-  color: red;
-}
-
-ul {
-  list-style: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-li {
-  display: flex;
-  justify-content: space-between;
-  background: #eee;
-  margin: 5px 0;
-  padding: 5px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
 }
 
-button {
+/* LAYOUT */
+.container {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+/* MAIN CARD (WIDE) */
+.main-card {
+  flex: 3;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.main-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#balance {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* INCOME / EXPENSE BOX */
+.inc-exp-container {
+  display: flex;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.inc-exp-container div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container div:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.money.plus {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.money.minus {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* FORM */
+form input {
   width: 100%;
-  padding: 8px;
-  margin-top: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  border: none;
+  color: #fff;
   cursor: pointer;
+}
+
+/* HISTORY SIDE PANEL */
+.history-card {
+  flex: 1.5;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.history-card ul {
+  list-style: none;
+  overflow-y: auto;
+}
+
+/* TRANSACTION ITEM */
+.history-card li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* GREEN */
+.history-card li.plus {
+  background: #2ecc71;
+}
+
+/* RED */
+.history-card li.minus {
+  background: #e74c3c;
+}
+
+.history-card button {
+  background: #000;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
