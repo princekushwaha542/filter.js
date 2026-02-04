@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camera Permission App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="left">
+    <h2>Camera Access</h2>
+    <p>
+      This app requires camera permission to continue.
+      Click the button below and allow access.
+    </p>
+
+    <button id="allowBtn">Allow Camera</button>
+     <button id="closeBtn">Close</button>
+
+    <p id="status" class="status">Permission not granted</p>
+  </div>
+
+  <div class="right">
+    <video id="video" autoplay muted></video>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
