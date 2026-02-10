@@ -13,6 +13,10 @@ function sendOTP() {
 
   document.getElementById("otpBox").classList.remove("hidden");
   document.getElementById("msg").innerText = "OTP Sent Successfully ✅";
+  setTimeout(() => {
+  document.getElementById("otpBtn").innerText = "Re-Send OTP";
+    
+  }, 2000);
 }
 
 function verifyOTP() {
